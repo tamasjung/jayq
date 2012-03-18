@@ -23,7 +23,7 @@
   (-seq [this] (when (.get this 0)
                  this))
   ISeq
-  (-first [this] (.slice this 0 1))
+  (-first [this] (.get this 0))
   (-rest [this] (if (> (count this) 1)
                   (.slice this 1)
                   (list)))
